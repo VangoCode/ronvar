@@ -20,16 +20,28 @@
 
     <body>
         
-        <header>
-            <img src="assets/images/icons/clear-view-escapes.svg">
-            <a href="#" class="btn">Get in Touch</a>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Ron</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <div class="wrapper">
+                <div class="site-header__logo">
+                    <div><img src="assets/images/icons/clear-view-escapes.svg"></div>
+                </div>
+                
+                <div class="site-header__menu-icon"></div>
+                
+                <div class="site-header__menu-content">
+                    <div class="site-header__btn-container">
+                        <a href="#" class="btn">Get in Touch</a>
+                    </div>
+
+                    <nav class="primary-nav primary-nav--pull-right">
+                        <ul>
+                            <li><a href="#about">About Ron</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
         
         <!-- Introduction -->
@@ -127,6 +139,8 @@
         <footer>
             <p>Copyright &copy; 2019 Ron Varshavsky. All rights reserved. <a href="#" class="btn btn--green">Get in Touch</a></p>
         </footer>
+        
+        <script src="assets/scripts/App.js"></script>
         
     </body>
 </html>
