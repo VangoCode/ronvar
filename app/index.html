@@ -37,9 +37,9 @@
 
                     <nav class="primary-nav primary-nav--pull-right">
                         <ul>
-                            <li><a href="#about">About Ron</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#about" id="about-link">About Ron</a></li>
+                            <li><a href="#performance" id="performance-link">Why Me?</a></li>
+                            <li><a href="#signup" id="signup-link">Sign Up</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -70,7 +70,7 @@
         </div> <!-- .introduction -->
         
         
-        <div id="about" class="page-section">
+        <div id="about" class="page-section" data-matching-link="#about-link">
             <div class="wrapper">
                     
                     <h2 class="headline headline--centered headline--light headline--b-margin-small">Ron Varshavsky - <strong>Freelancer, Student, Entrepreneur</strong></h2>
@@ -94,7 +94,7 @@
             </div> <!-- .wrapper -->
         </div> <!-- .about -->
         
-        <div id="performance" class="page-section page-section--blue page-section--b-black">
+        <div id="performance" class="page-section page-section--blue" data-matching-link="#performance-link">
             <div class="wrapper">
                 <h2 class="section-title performance--header"><img class="section-title__icon" src="assets/images/icons/star.svg">Why <strong>Me?</strong></h2>
 
@@ -136,6 +136,13 @@
                 
             </div> <!-- .wrapper -->
         </div> <!-- .performance -->
+        
+        
+        <div id="signup" class="page-section page-section--green" data-matching-link="#signup-link">
+            <div class="wrapper">
+                <h2 class="section-title performance--header"><img class="section-title__icon" src="assets/images/icons/star.svg">Why <strong>Me?</strong></h2>
+            </div>
+        </div>
         
         
         <footer class="site-footer">
