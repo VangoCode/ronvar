@@ -54,5 +54,14 @@
                 color: $minorGreen;
             }
         }
+        @mixin atHuge {
+            font-size: 3rem;
+            padding: 36px 7px;
+            background-color: transparent;
+            
+            &.is-current-link {
+                color: $minorGreen;
+            }
+        }
     }
 }

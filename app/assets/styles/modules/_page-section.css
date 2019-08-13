@@ -12,8 +12,12 @@
     }
     
     &--green {
-        background-color: $mainGreen;
+        background-color: $minorGreen;
         color: #fff;
+    }
+    
+    &--red {
+        background-color: $mainRed;
     }
     
     &--b-black {

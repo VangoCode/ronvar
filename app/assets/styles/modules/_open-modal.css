@@ -1,0 +1,6 @@
+.open-modal {
+    @mixin atHuge {
+        font-size: 2rem;
+        padding: 1.8rem 2.5rem;
+    }
+}

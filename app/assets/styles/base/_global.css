@@ -15,3 +15,18 @@ img {
 a {
     color: $mainGreen;
 }
+
+textarea {
+    resize: vertical;
+    margin-left: 4px;
+    border: none;
+    background: #DDD;
+    padding: 5px 5px;
+}
+
+input {
+    margin: 5px 0;
+    border: none;
+    background: #DDD;
+    padding: 5px 5px;
+}

@@ -1,0 +1,7 @@
+.separator {
+    display: inline-block;
+    margin-top: 25px;
+    width: 100px;
+    height: 1px;
+    background: $mainGray;
+}

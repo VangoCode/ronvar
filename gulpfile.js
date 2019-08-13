@@ -6,26 +6,27 @@ require('./gulp/tasks/scripts');
 require('./gulp/tasks/build');*/
 
 var gulp = require('gulp'),
-watch = require('gulp-watch'),
-postcss = require('gulp-postcss'),
-autoprefixer = require('autoprefixer'),
-cssvars = require('postcss-simple-vars'),
-nested = require('postcss-nested'),
-cssImport = require('postcss-import'),
-mixins = require('postcss-mixins'),
-hexrgba = require('postcss-hexrgba'),
-svgSprite = require('gulp-svg-sprite'),
-rename = require('gulp-rename'),
-del = require('del'),
-svg2png = require('gulp-svg2png'),
-webpack = require('webpack'),
-modernizr = require('gulp-modernizr'),
-imagemin = require('gulp-imagemin'),
-usemin = require('gulp-usemin'),
-rev = require('gulp-rev'),
-cssnano = require('gulp-cssnano'),
-uglify = require('gulp-uglify'),
-browserSync = require('browser-sync').create();
+    watch = require('gulp-watch'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssvars = require('postcss-simple-vars'),
+    nested = require('postcss-nested'),
+    cssImport = require('postcss-import'),
+    mixins = require('postcss-mixins'),
+    hexrgba = require('postcss-hexrgba'),
+    svgSprite = require('gulp-svg-sprite'),
+    rename = require('gulp-rename'),
+    del = require('del'),
+    svg2png = require('gulp-svg2png'),
+    webpack = require('webpack'),
+    modernizr = require('gulp-modernizr'),
+    imagemin = require('gulp-imagemin'),
+    usemin = require('gulp-usemin'),
+    rev = require('gulp-rev'),
+    cssnano = require('gulp-cssnano'),
+    uglify = require('gulp-uglify'),
+    connect = require('gulp-connect-php'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('styles', function() {
     console.log("Began styles function");
@@ -41,14 +42,13 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
     
-    browserSync.init({
-        notify: true,
-        server: {
-            baseDir: "app"
-        }
+    connect.server({}, function (){
+        browserSync.init({
+            server: "app"
+        });
     });
     
-    watch('./app/index.html', function() {
+    watch('./app/index.php', function() {
         browserSync.reload();
     });
     
@@ -176,7 +176,7 @@ gulp.task('deleteDistFolder', function() {
 gulp.task('copyGeneralFiles', function() {
     var pathsToCopy = [
         './app/**/*',
-        '!./app/index.html',
+        '!./app/index.php',
         '!./app/assets/images/**',
         '!./app/assets/styles/**',
         '!./app/assets/scripts/**',
@@ -199,7 +199,7 @@ gulp.task('optimizeImages', function() {
 });
 
 gulp.task('usemin', function() {
-    return gulp.src("./app/index.html")
+    return gulp.src("./app/index.php")
     .pipe(usemin({
         css: [function() {return rev()}, function() {return cssnano()}],
         js: [function() {return rev()}, function() {return uglify()}]

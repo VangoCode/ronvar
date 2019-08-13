@@ -1,13 +1,16 @@
 .introduction {
     position: relative;
-    border-bottom: 10px solid $mainBlue;
+   /* border-bottom: 10px solid $mainBlue;*/
+    background-color: $mainBlack;
+    height: 100vh;
+    
     
     &__image {
         display: block;
     }
     
     &__text-content {
-        padding-top: 88px;
+        padding-top: 80px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -16,7 +19,7 @@
         text-align: center;
         
         @mixin atMedium {
-            padding-top: 60px;
+            padding-top: 88px;
         }
     }
 
@@ -25,23 +28,30 @@
         font-weight: 300;
         letter-spacing: .5rem;
         text-shadow: 1px 1px 3px #000;
-        color: #DDD;
+        color: $mainRed;
         font-size: 2rem;
         margin-bottom: 0;
+        margin-top: 0;
         
         @mixin atSmall {
             font-size: 3.6rem;
         }
         
         @mixin atMedium {
-            font-size: 4.8rem;
+            font-size: 6.5rem;
+        }
+        @mixin atHuge {
+            font-size: 12rem;
+        }
+        @mixin atMega {
+            font-size: 16rem;
         }
         
     }
 
     &__subtitle {
         font-weight: 300;
-        color: #95E333;
+        color: $minorGreen;
         font-size: 1.2rem;
         text-shadow: 1px 1px 3px #000;
         margin-bottom: 0;
@@ -53,10 +63,16 @@
         @mixin atMedium {
             font-size: 2.9rem;
         }
+        @mixin atHuge {
+            font-size: 6rem;
+        }
+        @mixin atMega {
+            font-size: 8rem;
+        }
     }
     
     &__description {
-        color: #fff;
+        color: white;
         font-size: .8rem;
         text-shadow: 2px 2px 0 rgba(0,0,0,.5);
         font-weight: 100;

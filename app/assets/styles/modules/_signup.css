@@ -1,0 +1,38 @@
+.signup {
+    
+    margin: 0;
+    
+    &--form {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    &--form-input {
+        width: 60%;
+        height: 1.5rem;
+        font-size: 1.125rem;
+        border-radius: .5rem;
+    }
+    
+    &--form-input:focus {
+        border: 1px solid $mainGray;
+        border-radius: .5rem;
+        outline:0;
+    }
+    
+    &--form-input-textarea {
+        height: 4.5rem;
+    }
+    
+    &--thanks {
+        text-align: center;
+        position: relative;
+    }
+    
+    &--top-link {
+        color: $mainBlack;
+        text-decoration: none;
+    }
+    
+}

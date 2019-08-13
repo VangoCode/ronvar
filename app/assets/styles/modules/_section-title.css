@@ -2,9 +2,21 @@
     font-size: 2.55rem;
     font-weight: 300;
     text-align: center;
+    color: $mainRed;
     
     @mixin atSmall {
         font-size: 3.75rem;
+    }
+    
+    &--green {
+        color: $mainGreen;
+    }
+    
+    &--black {
+        color: $mainBlack;
+    }
+    &--white {
+        color: white;
     }
     
     strong {

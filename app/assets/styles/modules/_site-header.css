@@ -14,13 +14,16 @@
         background-color: rgba($mainBlue, .3);
         
         &--dark {
-            background-color: rgba(#2F4D99/*#3C40E8*/, .85);
+            background-color: rgba(##1c2e6b/*#2F4D99  #3C40E8*/, .85);
         }
     }
     
     &__btn-container {
         @mixin atMedium {
             float: right;
+        }
+        @mixin atHuge {
+            padding-top: 14px;
         }
     }
     
@@ -40,6 +43,15 @@
             
             .site-header--dark & {
                 transform: scale(.56);
+            }
+        }
+        @mixin atHuge {
+            left: auto;
+            transform: translateX(0);
+            transform: scale(1.8);
+            
+            .site-header--dark & {
+                transform: scale(1.29);
             }
         }
         

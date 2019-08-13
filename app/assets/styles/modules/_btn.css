@@ -6,6 +6,8 @@
     display: inline-block;
     transition: all .25s ease-out;
     
+    
+    
     &:hover {
         transform: scale(1.2);
     }
@@ -14,6 +16,7 @@
         background-color: $mainGreen;
     }
     
+    
     &--large {
         padding: .8rem 1.75rem;
         
@@ -21,6 +24,7 @@
             font-size: 1.25rem;
             padding: 1.1rem 1.9rem;
         }
+        
     }
     
     &--insert-border:hover {
@@ -29,5 +33,44 @@
     
     &--circlify:hover {
         border-radius: 10%;
+    }
+    
+    &--submit {
+        display: inline-block;
+        border: none;
+        padding: .5rem 1rem;
+        margin: 0;
+        text-decoration: none;
+        background: #0069ed;
+        color: #ffffff;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+            transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    
+    &--submit-red {
+        background-color: $mainRed;
+    }
+    
+    &--introduction {
+        display: none;
+        
+        @mixin atSmall {
+            display: inline-block;
+        }
+    }
+    
+    &--about {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        
+        @mixin atSmall {
+            display: none;
+        }
     }
 }

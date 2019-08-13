@@ -1,0 +1,13 @@
+.alert {
+    border: 1px solid black;
+    width: 50%;
+    transform: translateX(50%);
+    color: white;
+    padding: 1rem;
+    &-success {
+        background: $mainGreen;
+    }
+    &-danger {
+        background: red;
+    }
+}
